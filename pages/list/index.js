@@ -12,13 +12,15 @@ const List = ({names}) => {
 
     return ( 
         <div>
-            <h1>Lists</h1>  
+            <h1 >Lists</h1>  
                 {names.map(name=>(
-                    <Link href={'/list/' + name.id}key={name.id}>
+                    <div className="list_name">
+                    <Link href={'/list/' + name.id} key={name.id}>
                         <a>
-                             <h2>{name.name}</h2>
+                             <button className="btn">{name.name}</button>
                         </a>
                     </Link>
+                    </div>
                 ))}
         </div>
     );
